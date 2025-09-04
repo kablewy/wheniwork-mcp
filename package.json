@@ -1,0 +1,35 @@
+{
+  "name": "@mcp/wheniwork-server",
+  "version": "0.1.0",
+  "description": "MCP server for WhenIWork API integration",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "wheniwork-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "lint": "eslint src/",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^22.10.0",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
